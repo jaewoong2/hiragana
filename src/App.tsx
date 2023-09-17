@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
+import { Link } from 'react-router-dom'
 import { hiraganaSet } from './constants'
 
 type Hiragana = {
@@ -64,6 +65,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
+      <Link to="/sentence">문장연습</Link>
       <div className="character-display">
         <h1>{hiraganaSet[randomIndices[currentIndex]]?.character || ''}</h1>
         {showAnswer && <div className="answer">정답은 {actualAnswer} 입니다.</div>}
