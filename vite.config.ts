@@ -2,10 +2,10 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
-import eslint from 'vite-plugin-eslint'
 
 export default () => {
   return defineConfig({
-    plugins: [react(), tsconfigPaths(), eslint()],
+    plugins: [react(), tsconfigPaths()],
+    base: '/hiragana/', // ex: /my_project/
   })
 }
