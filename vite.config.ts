@@ -1,7 +1,11 @@
-import { defineConfig } from 'vite'
+/* eslint-disable import/no-extraneous-dependencies */
 import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+import tsconfigPaths from 'vite-tsconfig-paths'
+import eslint from 'vite-plugin-eslint'
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-})
+export default () => {
+  return defineConfig({
+    plugins: [react(), tsconfigPaths(), eslint()],
+  })
+}
